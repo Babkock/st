@@ -5,8 +5,9 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "Anonymous Pro:pixelsize=14:antialias=true:hinting=true";
+static char *font = "Anonymous Pro:pixelsize=15:antialias=true:hinting=true";
 static int borderpx = 2;
+unsigned int alpha = 0xa9;
 
 /*
  * What program is execed by st depends of these precedence rules:
@@ -85,30 +86,31 @@ unsigned int tabspaces = 8;
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
 	/* 8 normal colors */
-	"black",
-	"red3",
-	"green3",
-	"yellow3",
-	"blue2",
-	"magenta3",
-	"cyan3",
-	"gray90",
+	"#001b26",
+	"#e33632",
+	"#789800",
+	"#b89600",
+	"#298ed5",
+	"#738ac8",
+	"#2aa199",
+	"#93a1a1",
 
 	/* 8 bright colors */
-	"gray50",
-	"red",
-	"green",
-	"yellow",
-	"#5c5cff",
-	"magenta",
-	"cyan",
-	"white",
+	"#05202a",
+	"#e63a38",
+	"#7b9a06",
+	"#bca106",
+	"#2d97d8",
+	"#7a82ca",
+	"#32a99d",
+	"#99a4a4",
 
 	[255] = 0,
 
 	/* more colors can be added after 255 to use with DefaultXX */
-	"#cccccc",
-	"#555555",
+	"#b2b2b2",
+	"#2f0204",
+	"#eeeeee"
 };
 
 
@@ -117,7 +119,7 @@ static const char *colorname[] = {
  * foreground, background, cursor, reverse cursor
  */
 unsigned int defaultfg = 7;
-unsigned int defaultbg = 0;
+unsigned int defaultbg = 257;
 static unsigned int defaultcs = 256;
 static unsigned int defaultrcs = 257;
 
@@ -158,6 +160,12 @@ static MouseShortcut mshortcuts[] = {
 	/* button               mask            string */
 	{ Button4,              XK_ANY_MOD,     "\031" },
 	{ Button5,              XK_ANY_MOD,     "\005" },
+};
+
+/* begin: mouse scrollback patch */
+MouseKey mkeys[] = {
+	{ Button4,	ShiftMask,	kscrollup,	{ .i = 1} },
+	{ Button5,	ShiftMask,	kscrolldown,	{ .i = 1} }
 };
 
 /* Internal keyboard shortcuts. */
