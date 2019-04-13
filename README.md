@@ -3,5 +3,6 @@
 This is my personal fork of the [Suckless simple terminal](https://st.suckless.org). It has the following patches applied:
 
 * [Alpha](https://st.suckless.org/patches/alpha/)
+* [Hide Cursor](https://st.suckless.org/patches/hidecursor/)
 * [Scrollback + Mouse](https://st.suckless.org/patches/scrollback/)
 
