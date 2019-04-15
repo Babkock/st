@@ -5,7 +5,7 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "Anonymous Pro:pixelsize=14:antialias=true:hinting=0:file=/usr/share/fonts/truetype/anonymous-pro/Anonymice Nerd Font Complete.ttf";
+static char *font = "Anonymous Pro:pixelsize=15:antialias=true:hinting=0:file=/usr/share/fonts/truetype/anonymous-pro/Anonymice Nerd Font Complete.ttf";
 static int borderpx = 10;
 unsigned int alpha = 0xa9;
 
@@ -109,7 +109,7 @@ static const char *colorname[] = {
 
 	/* more colors can be added after 255 to use with DefaultXX */
 	"#b2b2b2",
-	"#040204",
+	"#120708",
 	"#eeeeee"
 };
 
