@@ -5,9 +5,9 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "Anonymous Pro:pixelsize=15:antialias=true:hinting=0:file=/usr/share/fonts/truetype/anonymous-pro/Anonymice Nerd Font Complete.ttf";
+static char *font = "Anonymous Pro:pixelsize=14:antialias=true:hinting=0:file=/usr/share/fonts/NerdFonts/ttf/Anonymice Fixed2.ttf";
 static int borderpx = 10;
-unsigned int alpha = 0xa9;
+unsigned int alpha = 0x98;
 
 /*
  * What program is execed by st depends of these precedence rules:
@@ -17,7 +17,7 @@ unsigned int alpha = 0xa9;
  * 4: value of shell in /etc/passwd
  * 5: value of shell in config.h
  */
-static char *shell = "/bin/sh";
+static char *shell = "/bin/zsh";
 char *utmp = NULL;
 char *stty_args = "stty raw pass8 nl -echo -iexten -cstopb 38400";
 
@@ -57,6 +57,11 @@ static unsigned int blinktimeout = 800;
  */
 static unsigned int cursorthickness = 2;
 
+const int boxdraw = 1;
+const int boxdraw_bold = 0;
+
+const int boxdraw_braille = 0;
+
 /*
  * bell volume. It must be a value between -100 and 100. Use 0 for disabling
  * it
@@ -81,35 +86,35 @@ char *termname = "st-256color";
  *
  *	stty tabs
  */
-unsigned int tabspaces = 8;
+unsigned int tabspaces = 4;
 
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
 	/* 8 normal colors */
-	"#001b26",
-	"#e33632",
-	"#789800",
-	"#b89600",
-	"#298ed5",
-	"#738ac8",
-	"#2aa199",
-	"#93a1a1",
+	"#202020",     // black
+	"#e17d4a",     // red
+	"#8bb165",     // green
+	"#bfb65c",     // yellow
+	"#539d9f",     // blue
+	"#9f595b",     // magenta
+	"#8d987e",     // cyan
+	"#c9b18b",     // white
 
 	/* 8 bright colors */
-	"#05202a",
-	"#e63a38",
-	"#7b9a06",
-	"#bca106",
-	"#2d97d8",
-	"#7a82ca",
-	"#32a99d",
-	"#99a4a4",
+	"#202020",     // black
+	"#e48c4a",     // red
+	"#8cb969",     // green
+	"#bfb640",     // yellow
+	"#529b9e",     // blue
+	"#80585a",     // magenta
+	"#889c79",     // cyan
+	"#978965",     // white
 
 	[255] = 0,
 
 	/* more colors can be added after 255 to use with DefaultXX */
 	"#b2b2b2",
-	"#120708",
+	"#121203",
 	"#eeeeee"
 };
 
