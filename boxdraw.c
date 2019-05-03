@@ -5,7 +5,7 @@
 
 #include <X11/Xft/Xft.h>
 #include "st.h"
-#include "boxdraw_data.h"
+#include "boxdraw.h"
 
 /* Rounded non-negative integers division of n / d  */
 #define DIV(n, d) (((n) + (d) / 2) / (d))
