@@ -5,4 +5,5 @@ This is my personal fork of the [Suckless simple terminal](https://st.suckless.o
 * [Alpha](https://st.suckless.org/patches/alpha/)
 * [Boxdraw](https://st.suckless.org/patches/boxdraw/)
 * [Scrollback + Mouse](https://st.suckless.org/patches/scrollback/)
+* Xresources support - automatically reads and applies on startup
 
