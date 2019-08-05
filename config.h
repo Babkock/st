@@ -5,7 +5,9 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "Anonymous Pro:pixelsize=14:antialias=true:hinting=0:file=/usr/share/fonts/NerdFonts/ttf/Anonymice Fixed2.ttf";
+static char *font = "Anonymous Pro:pixelsize=18:antialias=true:hinting=0:file=/usr/share/fonts/NerdFonts/ttf/Anonymice Fixed2.ttf";
+
+/* TODO: patch in font2 */
 static int borderpx = 10;
 unsigned int alpha = 0x98;
 
