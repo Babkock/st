@@ -42,7 +42,7 @@
 #define ISCONTROLC0(c)		(BETWEEN(c, 0, 0x1f) || (c) == '\177')
 #define ISCONTROLC1(c)		(BETWEEN(c, 0x80, 0x9f))
 #define ISCONTROL(c)		(ISCONTROLC0(c) || ISCONTROLC1(c))
-#define ISDELIM(u)		(utf8strchr(worddelimiters, u) != NULL)
+#define ISDELIM(u)		(utf8strchr((char*)worddelimiters, u) != NULL)
 #define TLINE(y)		((y) < term.scr ? term.hist[((y) + term.histi - \
 						term.scr + HISTSIZE + 1) % HISTSIZE] : \
 						term.line[(y) - term.scr])

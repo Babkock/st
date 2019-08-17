@@ -1,3 +1,6 @@
+#ifndef BOXDRAW_H
+#define BOXDRAW_H
+
 /*
  * Copyright 2018 Avi Halachmi (:avih) avihpit@yahoo.com https://github.com/avih
  * MIT/X Consortium License
@@ -212,3 +215,12 @@ static const unsigned short boxdata[256] = {
 	/* U+2504 - U+250B, U+254C - U+254F: unsupported (dashes) */
 	/* U+2571 - U+2573: unsupported (diagonals) */
 };
+
+#define DIV(n, d) (((n) + (d) / 2) / (d))
+
+void boxdraw_xinit(Display *dpy, Colormap cmap, XftDraw *draw, Visual *vis);
+int isboxdraw(Rune u);
+ushort boxdrawindex(const Glyph *g);
+
+#endif
+
