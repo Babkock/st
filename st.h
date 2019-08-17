@@ -3,6 +3,15 @@
 #include <stdint.h>
 #include <sys/types.h>
 
+/* Arbitrary sizes */
+#define UTF_INVALID   0xFFFD
+#define UTF_SIZ       4
+#define ESC_BUF_SIZ   (128*UTF_SIZ)
+#define ESC_ARG_SIZ   16
+#define STR_BUF_SIZ   ESC_BUF_SIZ
+#define STR_ARG_SIZ   ESC_ARG_SIZ
+#define HISTSIZE      2000
+
 /* macros */
 #define MIN(a, b)		((a) < (b) ? (a) : (b))
 #define MAX(a, b)		((a) < (b) ? (b) : (a))
@@ -19,6 +28,58 @@
 
 #define TRUECOLOR(r,g,b)	(1 << 24 | (r) << 16 | (g) << 8 | (b))
 #define IS_TRUECOL(x)		(1 << 24 & (x))
+
+#define IS_SET(flag)       ((term.mode & (flag)) != 0)
+#define ISCONTROLC0(c)     (BETWEEN(c, 0, 0x1f) || (c) == '\177')
+#define ISCONTROLC1(c)     (BETWEEN(c, 0x80, 0x9f))
+#define ISCONTROL(c)       (ISCONTROLC0(c) || ISCONTROLC1(c))
+#define ISDELIM(u)         (utf8strchr((char*)worddelimiters, u) != NULL)
+#define TLINE(y)           ((y) < term.scr ? term.hist[((y) + term.histi - \
+						term.scr + HISTSIZE + 1) % HISTSIZE] : \
+						term.line[(y) - term.scr])
+
+enum term_mode {
+	MODE_WRAP       = 1 << 0,
+	MODE_INSERT     = 1 << 1,
+	MODE_ALTSCREEN  = 1 << 2,
+	MODE_CRLF       = 1 << 3,
+	MODE_ECHO       = 1 << 4,
+	MODE_PRINT      = 1 << 5,
+	MODE_UTF8       = 1 << 6,
+	MODE_SIXEL      = 1 << 7,
+};
+
+enum cursor_movement {
+	CURSOR_SAVE,
+	CURSOR_LOAD
+};
+
+enum cursor_state {
+	CURSOR_DEFAULT  = 0,
+	CURSOR_WRAPNEXT = 1,
+	CURSOR_ORIGIN   = 2
+};
+
+enum charset {
+	CS_GRAPHIC0,
+	CS_GRAPHIC1,
+	CS_UX,
+	CS_USA,
+	CS_MULTI,
+	CS_GER,
+	CS_FIN
+};
+
+enum escape_state {
+	ESC_START      = 1,
+	ESC_CSI        = 2,
+	ESC_STR        = 4, /* OSC, PM, APC */
+	ESC_ALTCHARSET = 8,
+	ESC_STR_END    = 16, /* a final string was encountered */
+	ESC_TEST       = 32, /* Enter in test mode */
+	ESC_UTF8       = 64,
+	ESC_DCS        = 128,
+};
 
 enum glyph_attribute {
 	ATTR_NULL       = 0,

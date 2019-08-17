@@ -4,10 +4,9 @@
  * appearance
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
- */
-static char *font = "Anonymous Pro:pixelsize=18:antialias=true:hinting=0:file=/usr/share/fonts/NerdFonts/ttf/Anonymice Fixed2.ttf";
+*/
+static char *font = "Anonymous Pro:pixelsize=14:antialias=true:autohint=false:hinting=0:file=/usr/share/fonts/NerdFonts/ttf/Anonymice Fixed2.ttf";
 
-/* TODO: patch in font2 */
 static int borderpx = 10;
 unsigned int alpha = 0x98;
 
@@ -18,7 +17,7 @@ unsigned int alpha = 0x98;
  * 3: SHELL environment variable
  * 4: value of shell in /etc/passwd
  * 5: value of shell in config.h
- */
+*/
 static char *shell = "/bin/zsh";
 char *utmp = NULL;
 char *stty_args = "stty raw pass8 nl -echo -iexten -cstopb 38400";
@@ -34,7 +33,7 @@ static float chscale = 1.0;
  * word delimiter string
  *
  * More advanced example: L" `'\"()[]{}"
- */
+*/
 wchar_t *worddelimiters = L" ";
 
 /* selection timeouts (in milliseconds) */
@@ -51,12 +50,12 @@ static unsigned int actionfps = 30;
 /*
  * blinking timeout (set to 0 to disable blinking) for the terminal blinking
  * attribute.
- */
+*/
 static unsigned int blinktimeout = 800;
 
 /*
  * thickness of underline and bar cursors
- */
+*/
 static unsigned int cursorthickness = 2;
 
 const int boxdraw = 1;
@@ -87,7 +86,7 @@ char *termname = "st-256color";
  *  running following command:
  *
  *	stty tabs
- */
+*/
 unsigned int tabspaces = 4;
 
 /* Terminal colors (16 first used in escape sequence) */
@@ -160,7 +159,7 @@ static unsigned int mousebg = 0;
 static unsigned int defaultattr = 11;
 
 ResourcePref resources[] = {
-		{"font",        STRING, &font },
+		//{"font",        STRING, &font },
 		{"color0",      STRING, &colorname[0] },
 		{"color1",      STRING, &colorname[1] },
 		{"color2",      STRING, &colorname[2] },
