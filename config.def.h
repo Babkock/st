@@ -7,6 +7,7 @@
  */
 static char *font = "Monospace:pixelsize=12:antialias=true:autohint=true";
 static int borderpx = 2;
+static int alpha = 0xcc;
 
 /*
  * What program is execed by st depends of these precedence rules:

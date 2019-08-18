@@ -89,27 +89,28 @@ char *termname = "st-256color";
 */
 unsigned int tabspaces = 4;
 
-/* Terminal colors (16 first used in escape sequence) */
+/* Terminal default colors (16 first used in escape sequence)
+ * Used as fallback in case Xresources don't load */
 static const char *colorname[] = {
 	/* 8 normal colors */
-	"#202020",     // black
-	"#e17d4a",     // red
-	"#8bb165",     // green
-	"#bfb65c",     // yellow
-	"#539d9f",     // blue
-	"#9f595b",     // magenta
-	"#8d987e",     // cyan
-	"#c9b18b",     // white
+	"#000000",     // black
+	"#ce0f0f",     // red
+	"#20db27",     // green
+	"#dddf10",     // yellow
+	"#1054cb",     // blue
+	"#903089",     // magenta
+	"#10dfdf",     // cyan
+	"#dfdfdf",     // white
 
 	/* 8 bright colors */
-	"#202020",     // black
-	"#e48c4a",     // red
-	"#8cb969",     // green
-	"#bfb640",     // yellow
-	"#529b9e",     // blue
-	"#80585a",     // magenta
-	"#889c79",     // cyan
-	"#978965",     // white
+	"#101010",     // black
+	"#de1212",     // red
+	"#20db27",     // green
+	"#edea14",     // yellow
+	"#1b64db",     // blue
+	"#a03099",     // magenta
+	"#14efef",     // cyan
+	"#efefef",     // white
 
 	[255] = 0,
 
