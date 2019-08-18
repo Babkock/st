@@ -9,3 +9,5 @@ This is my personal fork of the [Suckless simple terminal](https://st.suckless.o
 * [Scrollback + Mouse](https://st.suckless.org/patches/scrollback/)
 * Xresources support - automatically reads and applies on startup
 
+The colors specified in config.h are only the fallback colors, they will be replaced by Xresources.
+
