@@ -19,5 +19,6 @@ Quick shortcuts that I've defined in `config.h`
 * `Ctrl + Shift + V` - paste
 * `Ctrl + Shift + PageUp` - zoom in
 * `Ctrl + Shift + PageDown` - zoom out
+* `Ctrl + Shift + Return` - fork with same directory
 * `Ctrl + Shift + U` - open copied URL in surf
 
