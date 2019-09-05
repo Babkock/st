@@ -2,7 +2,9 @@
 
 ![screenshot](https://raw.githubusercontent.com/Babkock/st/master/screenshot.png)
 
-This is my personal fork of the [Suckless simple terminal](https://st.suckless.org). It has the following patches applied:
+This is my personal fork of the [Suckless simple terminal](https://st.suckless.org). It has the following patches applied, manually.
+
+## Patches
 
 * [Alpha](https://st.suckless.org/patches/alpha/)
 * [Boxdraw](https://st.suckless.org/patches/boxdraw/)
@@ -13,7 +15,7 @@ This is my personal fork of the [Suckless simple terminal](https://st.suckless.o
 
 The colors specified in `config.h` are only the fallback colors, they will be replaced by Xresources.
 
-Quick shortcuts that I've defined in `config.h`
+## Key bindings
 
 * `Ctrl + Shift + C` - copy selected string
 * `Ctrl + Shift + V` - paste
