@@ -1,4 +1,5 @@
 /* See LICENSE for license details. */
+#include <stdlib.h>
 #include <errno.h>
 #include <math.h>
 #include <limits.h>
@@ -2097,3 +2098,29 @@ run:
 
 	return 0;
 }
+
+/* opens the URL in the clipboard in a user-defined browser */
+void
+opencopied(const Arg *a)
+{
+	const size_t max_cmd = 2048;
+	const char *clip = xsel.clipboard;
+	if (!clip) {
+		fprintf(stderr, "Warning: nothing copied to clipboard\n");
+		return;
+	}
+
+	/* account for space/quote (3) and \0 (1) and & (1) */
+	char cmd[max_cmd + strlen(clip) + 5];
+	strncpy(cmd, (char *)a->v, max_cmd);
+	cmd[max_cmd] = '\0';
+
+	strcat(cmd, " \"");
+	strcat(cmd, clip);
+	strcat(cmd, "\"");
+	strcat(cmd, "&");
+
+	system(cmd);
+	return;
+}
+
