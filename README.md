@@ -22,5 +22,5 @@ The colors specified in `config.h` are only the fallback colors, they will be re
 * `Ctrl + Shift + PageUp` - zoom in
 * `Ctrl + Shift + PageDown` - zoom out
 * `Ctrl + Shift + Return` - fork with same directory
-* `Ctrl + Shift + U` - open copied URL in surf
+* `Ctrl + Shift + U` - open copied URL in [Surf](https://github.com/Babkock/surf)
 
