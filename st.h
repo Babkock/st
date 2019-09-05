@@ -149,6 +149,7 @@ typedef struct {
 void die(const char *, ...);
 void redraw(void);
 void draw(void);
+void newterm(const Arg *);
 void kscrolldown(const Arg *);
 void kscrollup(const Arg *);
 
