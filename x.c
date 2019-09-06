@@ -264,15 +264,13 @@ clippaste(const Arg *dummy)
 	Atom clipboard;
 
 	clipboard = XInternAtom(xw.dpy, "CLIPBOARD", 0);
-	XConvertSelection(xw.dpy, clipboard, xsel.xtarget, clipboard,
-			xw.win, CurrentTime);
+	XConvertSelection(xw.dpy, clipboard, xsel.xtarget, clipboard, xw.win, CurrentTime);
 }
 
 void
 selpaste(const Arg *dummy)
 {
-	XConvertSelection(xw.dpy, XA_PRIMARY, xsel.xtarget, XA_PRIMARY,
-			xw.win, CurrentTime);
+	XConvertSelection(xw.dpy, XA_PRIMARY, xsel.xtarget, XA_PRIMARY, xw.win, CurrentTime);
 }
 
 void
@@ -506,8 +504,7 @@ selnotify(XEvent *e)
 			 * PropertyNotify events anymore.
 			 */
 			MODBIT(xw.attrs.event_mask, 0, PropertyChangeMask);
-			XChangeWindowAttributes(xw.dpy, xw.win, CWEventMask,
-					&xw.attrs);
+			XChangeWindowAttributes(xw.dpy, xw.win, CWEventMask, &xw.attrs);
 		}
 
 		if (type == incratom) {
@@ -517,8 +514,7 @@ selnotify(XEvent *e)
 			 * chunk of data.
 			 */
 			MODBIT(xw.attrs.event_mask, 1, PropertyChangeMask);
-			XChangeWindowAttributes(xw.dpy, xw.win, CWEventMask,
-					&xw.attrs);
+			XChangeWindowAttributes(xw.dpy, xw.win, CWEventMask, &xw.attrs);
 
 			/*
 			 * Deleting the property is the transfer start signal.
@@ -608,16 +604,11 @@ selrequest(XEvent *e)
 		} else if (xsre->selection == clipboard) {
 			seltext = xsel.clipboard;
 		} else {
-			fprintf(stderr,
-				"Unhandled clipboard selection 0x%lx\n",
-				xsre->selection);
+			fprintf(stderr, "Unhandled clipboard selection 0x%lx\n", xsre->selection);
 			return;
 		}
 		if (seltext != NULL) {
-			XChangeProperty(xsre->display, xsre->requestor,
-					xsre->property, xsre->target,
-					8, PropModeReplace,
-					(uchar *)seltext, strlen(seltext));
+			XChangeProperty(xsre->display, xsre->requestor, xsre->property, xsre->target, 8, PropModeReplace, (uchar *)seltext, strlen(seltext));
 			xev.property = xsre->property;
 		}
 	}
