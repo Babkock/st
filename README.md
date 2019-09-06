@@ -2,7 +2,7 @@
 
 ![screenshot](https://raw.githubusercontent.com/Babkock/st/master/screenshot.png)
 
-This is my personal fork of the [Suckless simple terminal](https://st.suckless.org). It has the following patches applied, manually.
+This is my personal fork of the [Suckless simple terminal](https://st.suckless.org). The following patches were applied by hand.
 
 ## Patches
 
