@@ -46,12 +46,6 @@ typedef struct {
 	signed char appcursor; /* application cursor */
 } Key;
 
-enum resource_type {
-	STRING = 0,
-	INTEGER = 1,
-	FLOAT = 2
-};
-
 typedef struct {
 	char *name;
 	enum resource_type type;
@@ -210,14 +204,6 @@ static DC dc;
 static XWindow xw;
 static XSelection xsel;
 static TermWindow win;
-
-/* Font Ring Cache */
-enum {
-	FRC_NORMAL,
-	FRC_ITALIC,
-	FRC_BOLD,
-	FRC_ITALICBOLD
-};
 
 typedef struct {
 	XftFont *font;

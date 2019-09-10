@@ -18,3 +18,17 @@
 #define TRUEGREEN(x)     (((x) & 0xff00))
 #define TRUEBLUE(x)      (((x) & 0xff) << 8)
 
+enum resource_type {
+	STRING = 0,
+	INTEGER = 1,
+	FLOAT = 2
+};
+
+/* Font Ring Cache */
+enum {
+	FRC_NORMAL,
+	FRC_ITALIC,
+	FRC_BOLD,
+	FRC_ITALICBOLD
+};
+
