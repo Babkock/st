@@ -1,3 +1,6 @@
+#ifndef WIN_H
+#define WIN_H
+
 /* See LICENSE for license details. */
 
 enum win_mode {
@@ -37,3 +40,6 @@ void xsetpointermotion(int);
 void xsetsel(char *);
 int xstartdraw(void);
 void xximspot(int, int);
+
+#endif
+
