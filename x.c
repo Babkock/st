@@ -23,6 +23,13 @@ static char *argv0;
 #include "win.h"
 #include "x.h"
 
+#ifndef USE_ARGB
+#define USE_ARGB (alpha != OPAQUE)
+#else
+#undef USE_ARGB
+#define USE_ARGB (alpha != OPAQUE)
+#endif
+
 /* types used in config.h */
 typedef struct {
 	uint mod;

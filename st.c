@@ -28,6 +28,14 @@
  #include <libutil.h>
 #endif
 
+#ifndef USE_ARGB
+#define USE_ARGB (alpha != OPAQUE && opt_embed == NULL)
+#else
+#undef USE_ARGB
+#define USE_ARGB (alpha != OPAQUE && opt_embed == NULL)
+#endif
+
+
 typedef struct {
 	Glyph attr; /* current char attributes */
 	int x;

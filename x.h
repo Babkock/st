@@ -4,7 +4,7 @@
 #define XK_SWITCH_MOD (1<<13)
 
 #define OPAQUE 0xff
-#define USE_ARGB (alpha != OPAQUE)
+//#define USE_ARGB (alpha != OPAQUE && opt_embed == NULL)
 
 /* XEMBED messages */
 #define XEMBED_FOCUS_IN  4
