@@ -5,7 +5,7 @@ addons:
   apt:
     packages:
       - &base_deps
-        - libX11-dev
+        - libx11-dev
         - libxft-dev
         - libxrender-dev
         - libxft2
