@@ -1,6 +1,15 @@
 language: c
 compiler:
     - gcc
+addons:
+  apt:
+    packages:
+      - &base_deps
+        - libX11-dev
+        - libxft-dev
+        - libxrender-dev
+        - libxft2
+
 script:
     - make clean
     - make
