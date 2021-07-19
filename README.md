@@ -13,7 +13,7 @@ This is my personal fork of the [Suckless simple terminal](https://st.suckless.o
 * [Fork Terminal with Same CWD](https://st.suckless.org/patches/newterm/)
 * [Scrollback + Mouse](https://st.suckless.org/patches/scrollback/)
 * [Open Copied URL](https://st.suckless.org/patches/open_copied_url/)
-* Xresources support - automatically reads and applies on startup
+* Xresources support
 
 The colors specified in `config.h` are only the fallback colors, they will be replaced by Xresources.
 

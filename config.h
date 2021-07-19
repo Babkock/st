@@ -8,10 +8,10 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
 */
-static char *font = "Anonymous Pro:size=11.5:antialias=true";
+static char *font = "IBMPlex:size=14:antialias=true:file=/usr/share/fonts/truetype/ibm-plex/Blex Mono Nerd Font Complete.ttf";
 
-static int borderpx = 7;
-unsigned int alpha = 0x98;
+static int borderpx = 10;
+unsigned int alpha = 0x8a;
 
 /*
  * What program is execed by st depends of these precedence rules:

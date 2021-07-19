@@ -1,5 +1,8 @@
 /* See LICENSE for license details. */
 
+#ifndef ST_H
+#define ST_H
+
 #include <stdint.h>
 #include <sys/types.h>
 
@@ -204,3 +207,6 @@ extern unsigned int defaultbg;
 extern unsigned int alpha;
 extern MouseKey mkeys[];
 extern const int boxdraw, boxdraw_bold, boxdraw_braille;
+
+#endif
+
