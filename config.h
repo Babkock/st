@@ -8,10 +8,10 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
 */
-static char *font = "IBMPlex:size=14:antialias=true:file=/usr/share/fonts/truetype/ibm-plex/Blex Mono Nerd Font Complete.ttf";
+static char *font = "FuraCode Nerd Font:size=14:antialias=true:file=/usr/share/fonts/NerdFonts/ttf/Fura Code Regular Nerd Font Complete.ttf";
 
-static int borderpx = 10;
-unsigned int alpha = 0x8a;
+static int borderpx = 9;
+unsigned int alpha = 0x7a;
 
 /*
  * What program is execed by st depends of these precedence rules:
@@ -47,8 +47,10 @@ static unsigned int tripleclicktimeout = 600;
 int allowaltscreen = 1;
 
 /* frames per second st should at maximum draw to the screen */
-static unsigned int xfps = 120;
-static unsigned int actionfps = 30;
+//static unsigned int xfps = 120;
+//static unsigned int actionfps = 30;
+static double minlatency = 8;
+static double maxlatency = 33;
 
 /*
  * blinking timeout (set to 0 to disable blinking) for the terminal blinking
