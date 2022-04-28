@@ -1,6 +1,3 @@
-#ifndef WIN_H
-#define WIN_H
-
 /* See LICENSE for license details. */
 
 enum win_mode {
@@ -33,6 +30,8 @@ void xdrawline(Line, int, int, int);
 void xfinishdraw(void);
 void xloadcols(void);
 int xsetcolorname(int, const char *);
+int xgetcolor(int, unsigned char *, unsigned char *, unsigned char *);
+void xseticontitle(char *);
 void xsettitle(char *);
 int xsetcursor(int);
 void xsetmode(int, unsigned int);
@@ -40,6 +39,3 @@ void xsetpointermotion(int);
 void xsetsel(char *);
 int xstartdraw(void);
 void xximspot(int, int);
-
-#endif
-
