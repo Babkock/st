@@ -2,8 +2,7 @@
 
 [![Build Status](https://travis-ci.org/Babkock/st.svg?branch=master)](https://travis-ci.org/Babkock/st) [![pipeline status](https://gitlab.com/tbsuckless/st/badges/master/pipeline.svg)](https://gitlab.com/tbsuckless/st/-/commits/master)
 
-![screenshot](https://raw.githubusercontent.com/Babkock/st/master/screenshot.png)
-
+![screenshot](https://gitlab.com/tbsuckless/st/-/raw/master/screenshot.png)
 
 This is my personal fork of the [Suckless simple terminal](https://st.suckless.org). The following patches were applied by hand.
 
