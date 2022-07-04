@@ -7,7 +7,7 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "Space Mono Nerd Font:size=14:antialias=true:autohint=true";
+static char *font = "SpaceMono Nerd Font:size=14:antialias=true:autohint=true";
 static int borderpx = 7;
 
 /*
@@ -28,8 +28,10 @@ char *stty_args = "stty raw pass8 nl -echo -iexten -cstopb 38400";
 char *vtiden = "\033[?6c";
 
 /* Kerning / character bounding-box multipliers */
+//static float cwscale = 0.37;
+//static float chscale = 0.88;
 static float cwscale = 1.0;
-static float chscale = 0.9;
+static float chscale = 0.89;
 
 /*
  * word delimiter string
@@ -267,6 +269,7 @@ static Shortcut shortcuts[] = {
 	{ TERMMOD,              XK_Y,           selpaste,       {.i =  0} },
 	{ ShiftMask,            XK_Insert,      selpaste,       {.i =  0} },
 	{ TERMMOD,              XK_Num_Lock,    numlock,        {.i =  0} },
+	{ TERMMOD,              XK_Return,      newterm,        {.i =  0} },
 	{ ShiftMask,            XK_Page_Up,     kscrollup,      {.i = -1} },
 	{ ShiftMask,            XK_Page_Down,   kscrolldown,    {.i = -1} },
 };

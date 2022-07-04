@@ -10,6 +10,7 @@ This is my personal fork of the [Suckless simple terminal](https://st.suckless.o
 
 * [Alpha](https://st.suckless.org/patches/alpha/)
 * [Boxdraw](https://st.suckless.org/patches/boxdraw/)
+* [Fork with CWD](https://st.suckless.org/patches/newterm)
 * [Gradient](https://st.suckless.org/patches/gradient/)
 * [Scrollback + Mouse](https://st.suckless.org/patches/scrollback/)
 * [Selection colors](https://st.suckless.org/patches/selectioncolors/)
