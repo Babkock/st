@@ -23,12 +23,12 @@ The colors specified in =config.h= are only the fallback colors, they will be re
 
 * Key bindings
 
-|Key combo                 |Action                   |
-|--------------------------+-------------------------|
-|=Ctrl + Shift + C=        | copy selected string    |
-|=Ctrl + Shift + V=        | paste                   |
-|=Ctrl + Shift + PageUp=   | zoom in                 |
-|=Ctrl + Shift + PageDown= | zoom out                |
-|=Shift + Scroll Up=       | scroll back up in the buffer|
-|=Shift + Scroll Down=     | scroll down in the buffer|
+|Key combo                |Action                   |
+|-------------------------+-------------------------|
+|Ctrl + Shift + C         | copy selected string    |
+|Ctrl + Shift + V         | paste                   |
+|Ctrl + Shift + PageUp    | zoom in                 |
+|Ctrl + Shift + PageDown  | zoom out                |
+|Shift + Scroll Up        | scroll back up in the buffer|
+|Shift + Scroll Down      | scroll down in the buffer|
 
