@@ -5,6 +5,7 @@
 
 [[https://travis-ci.org/Babkock/st][https://travis-ci.org/Babkock/st.svg?branch=master]] [[https://gitlab.com/tbsuckless/st/-/commits/master][https://gitlab.com/tbsuckless/st/badges/master/pipeline.svg]]
 [[https://github.com/Babkock/st/actions/workflows/c-cpp.yml/badge.svg]]
+[[https://img.shields.io/badge/License-MIT-yellow.svg]]
 
 [[https://gitlab.com/tbsuckless/st/-/raw/master/screenshot.png][https://gitlab.com/tbsuckless/st/-/raw/master/screenshot.png]]
 
