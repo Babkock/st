@@ -4,8 +4,13 @@
 #+LANGUAGE: en
 
 [[https://travis-ci.org/Babkock/st][https://travis-ci.org/Babkock/st.svg?branch=master]] [[https://gitlab.com/tbsuckless/st/-/commits/master][https://gitlab.com/tbsuckless/st/badges/master/pipeline.svg]]
+[[https://github.com/Babkock/st/actions/workflows/c-cpp.yml/badge.svg]]
 
 [[https://gitlab.com/tbsuckless/st/-/raw/master/screenshot.png][https://gitlab.com/tbsuckless/st/-/raw/master/screenshot.png]]
+
+* Disclaimer
+
+This repository is on [[https://gitlab.com/tbsuckless/st][GitLab]]. The [[https://github.com/Babkock/st][GitHub]] version is a mirror.
 
 This is my personal fork of the [[https://st.suckless.org][Suckless st]]. The following patches were applied by hand.
 
@@ -21,7 +26,7 @@ This is my personal fork of the [[https://st.suckless.org][Suckless st]]. The fo
 
 The colors specified in =config.h= are only the fallback colors, they will be replaced by =.Xresources=. Use the standard names of =color0=, =color1=, etc.
 
-* Key bindings
+* Key Bindings
 
 |Key combo                |Action                   |
 |-------------------------+-------------------------|
